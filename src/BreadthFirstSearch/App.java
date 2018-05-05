@@ -1,58 +1,74 @@
 package BreadthFirstSearch;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class App {
-
 	
-
-//List<Vertex> aList = new ArrayList();
-//
-//
-//var bNode = new Vertex(2);
-//
-//var cNode = new Vertex(3);
-//
-//aList.add(bNode);
-//aList.add(cNode);
-//
-//aNode.setNeighbourList(secondLevelList);
-//
-////b node own list
-//
-//List<Vertex> bList = new ArrayList();
-//
-//var dNode = new Vertex(4);
-//
-//var eNode = new Vertex(5);
-//
-//var fNode = new Vertex(6);
-//
-//bList.add(dNode);
-//
-//bList.add(eNode);
-//
-//bList.add(fNode);
-//
-//bNode.setNeighbourList(bList);
-//
-////c node own list
-//
-//List<Vertex> cList = new ArrayList();
-//
-//var gNode = new Vertex(7);
-//
-//var hNode = new Vertex(8);
-//
-//var iNode = new Vertex(9);
-//
-//cList.add(gNode);
-//
-//cList.add(hNode);
-//
-//cList.add(iNode);
-//
-//cNode.setNeighbourList(cList);
+	  public static void main(String[] args){
+		  
+		//instantiating BFS algorithm class
+		  
+		 BFS bfs= new BFS();  
+		  
+		//creating the tree  
+		  
+		//ROOT LEVEL  
+		  Vertex aNode = new Vertex(1);  
+	  
+		  List<Vertex> aList = new ArrayList<Vertex>();
+		  
+		  
+		  Vertex bNode = new Vertex(2);
+		  
+		  Vertex cNode = new Vertex(3);
+		  
+		  aList.add(bNode);
+		  aList.add(cNode);
+		  
+		  aNode.setNeighbourList(aList);
+		  
+		  //SECOND LEVEL
+		  //b node own list
+		  
+		  List<Vertex> bList = new ArrayList<Vertex>();
+		  
+		  //CREATING THIRD LEVEL NODES
+		  Vertex dNode = new Vertex(4);
+		  
+		  Vertex eNode = new Vertex(5);
+		  
+		  Vertex fNode = new Vertex(6);
+		  
+		  bList.add(dNode);
+		  
+		  bList.add(eNode);
+		  
+		  bList.add(fNode);
+		  
+		  bNode.setNeighbourList(bList);
+		  
+		  //c node own list
+		  
+		  List<Vertex> cList = new ArrayList<Vertex>();
+		  
+		  //CREATING THIRD LEVEL NODES
+		  
+		  Vertex gNode = new Vertex(7);
+		  
+		  Vertex hNode = new Vertex(8);
+		  
+		  Vertex iNode = new Vertex(9);
+		  
+		  cList.add(gNode);
+		  
+		  cList.add(hNode);
+		  
+		  cList.add(iNode);
+		  
+		  cNode.setNeighbourList(cList);
+		  
+	    }
 	
 }
