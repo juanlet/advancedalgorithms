@@ -39,6 +39,10 @@ public class Vertex {
 	public void setNeighbourList(List<Vertex> neighbourList) {
 		this.neighbourList = neighbourList;
 	}
+	
+	public void addNeighbourVertex(Vertex vertex){
+		this.neighbourList.add(vertex);
+	}
 
 	@Override
 	public String toString() {

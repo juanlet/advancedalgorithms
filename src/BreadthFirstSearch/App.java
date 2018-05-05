@@ -15,22 +15,19 @@ public class App {
 		//ROOT LEVEL  
 		  Vertex aNode = new Vertex(1);  
 	  
-		  List<Vertex> aList = new ArrayList<Vertex>();
-		  
+ 
 		  
 		  Vertex bNode = new Vertex(2);
 		  
 		  Vertex cNode = new Vertex(3);
 		  
-		  aList.add(bNode);
-		  aList.add(cNode);
-		  
-		  aNode.setNeighbourList(aList);
+		  aNode.addNeighbourVertex(bNode);
+		  aNode.addNeighbourVertex(cNode);
+		 
 		  
 		  //SECOND LEVEL
 		  //b node own list
 		  
-		  List<Vertex> bList = new ArrayList<Vertex>();
 		  
 		  //CREATING THIRD LEVEL NODES for b
 		  Vertex dNode = new Vertex(4);
@@ -39,18 +36,13 @@ public class App {
 		  
 		  Vertex fNode = new Vertex(6);
 		  
-		  bList.add(dNode);
-		  
-		  bList.add(eNode);
-		  
-		  bList.add(fNode);
-		  
-		  bNode.setNeighbourList(bList);
+		  bNode.addNeighbourVertex(dNode);
+		  bNode.addNeighbourVertex(eNode);
+		  bNode.addNeighbourVertex(fNode);
 		  
 		  //c node own list
 		  
-		  List<Vertex> cList = new ArrayList<Vertex>();
-		  
+		  		  
 		  //CREATING THIRD LEVEL NODES for c
 		  
 		  Vertex gNode = new Vertex(7);
@@ -59,13 +51,10 @@ public class App {
 		  
 		  Vertex iNode = new Vertex(9);
 		  
-		  cList.add(gNode);
+		  cNode.addNeighbourVertex(gNode);
+		  cNode.addNeighbourVertex(hNode);
+		  cNode.addNeighbourVertex(iNode);
 		  
-		  cList.add(hNode);
-		  
-		  cList.add(iNode);
-		  
-		  cNode.setNeighbourList(cList);
 		  
 			//instantiating BFS algorithm class with the created tree structure
 		  
