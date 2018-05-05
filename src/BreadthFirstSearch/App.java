@@ -8,9 +8,7 @@ public class App {
 	
 	  public static void main(String[] args){
 		  
-		//instantiating BFS algorithm class
-		  
-		 BFS bfs= new BFS();  
+	
 		  
 		//creating the tree  
 		  
@@ -34,7 +32,7 @@ public class App {
 		  
 		  List<Vertex> bList = new ArrayList<Vertex>();
 		  
-		  //CREATING THIRD LEVEL NODES
+		  //CREATING THIRD LEVEL NODES for b
 		  Vertex dNode = new Vertex(4);
 		  
 		  Vertex eNode = new Vertex(5);
@@ -53,7 +51,7 @@ public class App {
 		  
 		  List<Vertex> cList = new ArrayList<Vertex>();
 		  
-		  //CREATING THIRD LEVEL NODES
+		  //CREATING THIRD LEVEL NODES for c
 		  
 		  Vertex gNode = new Vertex(7);
 		  
@@ -68,6 +66,12 @@ public class App {
 		  cList.add(iNode);
 		  
 		  cNode.setNeighbourList(cList);
+		  
+			//instantiating BFS algorithm class with the created tree structure
+		  
+		 BFS bfs= new BFS(aNode);  
+		   //execute bfs algorithm
+		 bfs.execute();	 
 		  
 	    }
 	
