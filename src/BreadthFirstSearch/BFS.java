@@ -27,11 +27,12 @@ public class BFS {
 			//take one element from the queue
 			Vertex currNode = this.queue.remove();
 			
-			//add root neighbours to queue
-			this.addAllCurrentNodeNeighboursToQueue(currNode.getNeighbourList());	
-			
 			//mark node as visited
 			currNode.setVisited(true);
+			
+			
+			//add root neighbours to queue
+			this.addAllCurrentNodeNeighboursToQueue(currNode.getNeighbourList());	
 			
 			System.out.println(currNode.toString());
 						
@@ -44,7 +45,10 @@ public class BFS {
 	private void addAllCurrentNodeNeighboursToQueue(List<Vertex> vertexList) {
 		  
 		for(Vertex vertex: vertexList) {
+			if(!vertex.isVisited()) {
 			this.queue.add(vertex);
+			vertex.setVisited(true);
+			}
 		}
 	}
 	
