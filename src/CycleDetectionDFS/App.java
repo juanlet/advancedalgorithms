@@ -15,9 +15,28 @@ public class App {
 		Vertex vertex5 = new Vertex("5");
 		Vertex vertex6 = new Vertex("6");
 		
+		//graph with no cycles
+//		vertex1.addNeighbour(vertex2);
+//		vertex2.addNeighbour(vertex3);
+//		vertex1.addNeighbour(vertex3);
+//		vertex4.addNeighbour(vertex1);
+//		vertex4.addNeighbour(vertex5);
+//    	vertex5.addNeighbour(vertex6);
+		 
+		//graph with 1 cycle
+		
+//		vertex1.addNeighbour(vertex2);
+//		vertex1.addNeighbour(vertex3);
+//		vertex2.addNeighbour(vertex3);
+//		vertex4.addNeighbour(vertex1);
+//		vertex4.addNeighbour(vertex5);
+//		vertex5.addNeighbour(vertex6);
+//		vertex6.addNeighbour(vertex4);
+		
+		//graph with 2 cycles
 		vertex1.addNeighbour(vertex2);
-		vertex1.addNeighbour(vertex3);
 		vertex2.addNeighbour(vertex3);
+		vertex3.addNeighbour(vertex1);
 		vertex4.addNeighbour(vertex1);
 		vertex4.addNeighbour(vertex5);
 		vertex5.addNeighbour(vertex6);
