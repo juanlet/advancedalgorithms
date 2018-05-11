@@ -11,9 +11,11 @@ public class DIjkstraAlgorithm {
 	public void computePaths(Vertex sourceVertex) {
 		sourceVertex.setDistance(0);
 		PriorityQueue<Vertex> priorityQueue = new PriorityQueue<>();
+		//add the root vertex
 		priorityQueue.add(sourceVertex);
 		
 		while(!priorityQueue.isEmpty()) {
+			//get the mínimum vertex
 			Vertex actualVertex = priorityQueue.poll();
 			
 			for(Edge edge: actualVertex.getAdjacenciesList()) {
