@@ -73,7 +73,7 @@ public class App {
 			//instantiating BFS algorithm class with the created tree structure
 		  
 		 BFS bfs= new BFS(vertex1);  
-		   //execute bfs algorithm
+		   //execute bfs algorithm ...
 		 bfs.execute();	 
 		  
 	    }
